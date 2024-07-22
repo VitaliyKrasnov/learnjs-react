@@ -13,7 +13,7 @@ export const Layout = ({ restaurants }) => {
             <Header />
             {restaurants.map(({ name, id }) => {
                 return (
-                    <Tab name={name} clickHandler={() => setActiveRestaurant({ id: id })} />
+                    <Tab name={name} disabled={id === activeRestaurant.id} clickHandler={() => setActiveRestaurant({ id: id })} />
                 );
             })}
             <Restaurant restaurant={activeRestaurantObj} />
