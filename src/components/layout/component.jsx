@@ -7,24 +7,17 @@ import { Restaurant } from "../restaurant/component.jsx";
 export const Layout = ({ restaurants }) => {
     const [activeRestaurant, setActiveRestaurant] = useState({ name: restaurants[0].name });
     const setActiveRestaurantName = (name) => setActiveRestaurant({ name: name });
+    let activeRestaurantObj = restaurants.find((restaurant) => restaurant.name === activeRestaurant.name);
 
     return (
         <div>
             <Header />
             {restaurants.map(({ name }) => {
                 return (
-                    <Tab
-                        name={name}
-                        clickHandler={() => {
-                            setActiveRestaurantName(name);
-                        }}
-                    />
+                    <Tab name={name} clickHandler={() => setActiveRestaurantName(name)} />
                 );
             })}
-            {restaurants.map((restaurant) => {
-                return <Restaurant activeRestaurant={activeRestaurant} 
-                                    restaurant={restaurant} />;
-            })}
+            <Restaurant activeRestaurant={activeRestaurant} restaurant={activeRestaurantObj} />
             <Footer />
         </div>
     );

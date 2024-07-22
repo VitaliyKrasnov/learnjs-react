@@ -1,10 +1,8 @@
 import { Reviews } from "../reviews/component";
 import { Menu } from "./menu/component";
 
-export const Restaurant = ({ restaurant, activeRestaurant }) => {
-    if (activeRestaurant.name !== restaurant.name) {
-        return null;
-    }
+export const Restaurant = ({ restaurant }) => {
+
     return (
         <div>
             <h2>{restaurant.name}</h2>
