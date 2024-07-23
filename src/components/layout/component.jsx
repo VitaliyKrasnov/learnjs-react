@@ -1,21 +1,19 @@
 import { useState } from "react";
-import { Tab } from "../tab/component.jsx";
+import { TabsSection } from "../tabsSection/component.jsx";
 import { Footer } from "../footer/component.jsx";
 import { Header } from "../header/component.jsx";
 import { Restaurant } from "../restaurant/component.jsx";
 
 export const Layout = ({ restaurants }) => {
-    const [activeRestaurant, setActiveRestaurant] = useState({ id: restaurants[0].id });
-    let activeRestaurantObj = restaurants.find((restaurant) => restaurant.id === activeRestaurant.id);
+    const [activeRestaurantId, setActiveRestaurantId] = useState(restaurants[0].id );
+    const activeRestaurantObj = restaurants.find((restaurant) => restaurant.id === activeRestaurantId);
 
     return (
         <div>
             <Header />
-            {restaurants.map(({ name, id }) => {
-                return (
-                    <Tab name={name} disabled={id === activeRestaurant.id} clickHandler={() => setActiveRestaurant({ id: id })} />
-                );
-            })}
+            <TabsSection restaurants={restaurants} 
+                         activeRestaurantId={activeRestaurantId} 
+                         onClickHandler={(id) => setActiveRestaurantId(id)} />
             <Restaurant restaurant={activeRestaurantObj} />
             <Footer />
         </div>

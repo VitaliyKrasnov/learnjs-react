@@ -11,7 +11,7 @@ export const Dish = ({ dish }) => {
             <span style={{ fontWeight: "bold" }}>
                 {dish.name} - ${dish.price}
             </span>
-            <Counter dishAmount={dishAmount} incDishAmount={incDishAmount} decDishAmount={decDishAmount} />
+            <Counter value={dishAmount} increment={incDishAmount} decrement={decDishAmount} />
             <div style={{paddingTop: '10px'}}>
                 <span>Ingredients:</span>&nbsp;<span>{dish.ingredients.join(", ")}</span>
             </div>
