@@ -98,14 +98,7 @@ export const restaurants = [
         ingredients: ["bread"],
       },
     ],
-    reviews: [
-      {
-        id: "53b642d7-5e86-4717-a466-0640a1dee076",
-        user: "Agata",
-        text: "Best bakery",
-        rating: 5,
-      },
-    ],
+    reviews: [],
   },
   {
     id: "d9241927-09e1-44f3-8986-a76346869037",
