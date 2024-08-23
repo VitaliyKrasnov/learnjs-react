@@ -1,0 +1,33 @@
+.dishBlock {
+    padding-bottom: 20px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.price {
+    padding-left: 10px;
+    font-weight: lighter;
+}
+
+.ingridientsBlock {
+    padding-top: 10px;
+}
+
+.ingredients {
+    padding-left: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.dishAndCounterContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.counterComponentContainer {
+    margin-left: 10px;
+}

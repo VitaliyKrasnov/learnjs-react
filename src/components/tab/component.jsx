@@ -1,6 +1,9 @@
+import styles from "./styles.module.css"
+
 export const Tab = ({ name, clickHandler, disabled }) => {
     return (
-        <button disabled={disabled} style={{ height: "40px", width: "90px", marginRight: "20px" }} 
+        <button disabled={disabled} 
+                className={styles.tabButton} 
                 onClick={clickHandler}>
             {name}
         </button>

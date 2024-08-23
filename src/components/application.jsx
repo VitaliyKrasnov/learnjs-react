@@ -4,6 +4,8 @@ import { Layout } from "./layout/component.jsx";
 import { TabsSection } from "./tabsSection/component.jsx";
 import { Restaurant } from "./restaurant/component.jsx";
 
+import "./reset.css"
+
 export const Application = () => {
     const [activeRestaurantId, setActiveRestaurantId] = useState(restaurants[0].id);
     const activeRestaurantObj = restaurants.find((restaurant) => restaurant.id === activeRestaurantId);

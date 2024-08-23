@@ -1,3 +1,5 @@
+import styles from "./styles.module.css"
+
 export const Footer = () => {
-    return <footer style={{marginTop: '50px'}}>Контакты:</footer>;
+    return <footer className={styles.footer}>Контакты:</footer>;
 };

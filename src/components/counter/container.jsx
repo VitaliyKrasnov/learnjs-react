@@ -13,10 +13,11 @@ const useCounter = (min, max, step) => {
     };
 };
 
-export const CounterContainer = ({ min=0, max=9, step=1 }) => {
+export const CounterContainer = ({ min=0, max=9, step=1, containerClass, viewVariant }) => {
     const {value, increment, decrement} = useCounter(min, max, step);
     
     return (
-        <Counter value={value} increment={increment} decrement={decrement} />
+        <Counter value={value} increment={increment} decrement={decrement}
+                 containerClass={containerClass} viewVariant={viewVariant} />
     );
 };
