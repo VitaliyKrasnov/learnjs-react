@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import styles from "./styles.module.css"
+
 const calculateProgressBarWidth = () => {
     const maxHeight = document.documentElement.scrollHeight;
     const sizeHeight = window.innerHeight;
@@ -26,16 +28,8 @@ const useScrollProgressBar = () => {
 export const ScrollProgressBar = () => {
     const progressBarWidth = useScrollProgressBar();
     return (
-        <div
-            style={{
-                backgroundColor: "#2bc10d",
-                position: "fixed",
-                zIndex: "99999",
-                width: progressBarWidth,
-                height: "4px",
-                top: "0",
-                left: "0",
-            }}
+        <div className={styles.progressBar}
+            style={{width: progressBarWidth}}
         ></div>
     );
 };

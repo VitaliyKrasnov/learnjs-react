@@ -1,13 +1,15 @@
+import styles from "./styles.module.css"
+
 export const Reviews = ({ reviews }) => {
     return (
         <div>
             <h3>Reviews</h3>
-            <ul style={{ listStyleType: "none" }}>
+            <ul className={styles.reviewsList}>
                 {!reviews || reviews.length === 0 ? (
                     <li>Отзывов ещё нет</li>
                 ) : (
                     reviews.map((review) => (
-                        <li style={{ paddingBottom: "10px" }}>
+                        <li className={styles.reviewItem}>
                             {review.user} ({review.rating}): {review.text}
                         </li>
                     ))

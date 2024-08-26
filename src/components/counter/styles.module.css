@@ -1,0 +1,120 @@
+.counterContainer {
+	display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* review counter styles  */
+.countReview {
+	text-align: center;
+    width: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #5c5b61;
+	user-select: none;
+}
+
+.reviewCounter {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 24px;
+	outline: none;
+	border: none;    
+	border-radius: 3px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-decoration: none;
+	color: #8d9b92;
+	background-color: #fff;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+}
+
+.reviewCounterLeftContent::before {
+	content: "\2212";
+	font-size: 34px;
+	font-weight: bold;
+}
+
+.reviewCounterRightContent::before {
+	content: "\002B";
+	font-size: 34px;
+	font-weight: bold;
+}
+
+.reviewCounter:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+
+.reviewCounter:hover {
+	box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+}
+
+.reviewCounter:active {
+	background-color: #efefef !important;
+}
+
+/* dish counter styles */
+.countDish {
+    text-align: center;
+    width: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: serif;
+    color: #59605f;
+    user-select: none;
+}
+
+.dishCounter {
+	display: inline-block;	
+	box-sizing: border-box;
+	outline: none;
+	border: none;    
+	border-radius: 2px;
+	padding: 0;
+	height: 20px;
+	width: 20px;
+	line-height: 20px;
+	font-size: 14px; 
+	text-transform: uppercase;
+	font-weight: normal;
+	text-decoration: none;
+	color: #000;
+	background-color: #a7e5aa;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;
+	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+}
+
+.dishCounter:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+
+.dishCounter:hover {
+	box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+}
+
+.dishCounter:active {
+	background-color: #058c38 !important;
+}
+
+.dishCounterLeftContent::before {
+	content: "\25BC";
+	font-size: 14px;
+	color: #1f8a5e;
+}
+
+.dishCounterRightContent::before {
+	content: "\25B2";
+	font-size: 14px;
+	color: #1f8a5e;
+}

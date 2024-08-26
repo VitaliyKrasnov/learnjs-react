@@ -1,13 +1,15 @@
 import { Counter } from "../counter/component.jsx";
 import { useForm } from "./hook.js";
 
+import styles from "./styles.module.css"
+
 export const ReviewForm = () => {
     const {form, setName, setReview, incRating, decRating, clearForm} = useForm();
     const {name, review, rating} = form;
 
     return (
         <div>
-            <div style={{ marginBottom: "10px" }}>
+            <div className={styles.nameContainer}>
                 <div><span>Ваше имя:</span></div>
                 <input type="text" value={name} 
                         onChange={(event) => {
@@ -15,7 +17,7 @@ export const ReviewForm = () => {
                         }} />
             </div>
 
-            <div style={{ marginBottom: "10px" }}>
+            <div className={styles.textContainer}>
                 <div><span>Отзыв:</span></div>
                 <textarea cols={50} rows={3} value={review}
                             placeholder="Напишите здесь ваш отзыв о ресторане"
@@ -24,11 +26,13 @@ export const ReviewForm = () => {
                             }}></textarea>
             </div>
 
-            <div style={{ marginBottom: "20px" }}>
-                <span>Рейтинг:</span>
+            <div className={styles.counterContainer}>
+                <span className={styles.ratingText}>Рейтинг:</span>
                 <Counter value={rating} 
                          increment={() => {incRating(rating)}} 
-                         decrement={() => {decRating(rating)}} />
+                         decrement={() => {decRating(rating)}}
+                         viewVariant={"reviewForm"}
+                         containerClass={styles.counterComponentContainer} />
             </div>
 
             <div>

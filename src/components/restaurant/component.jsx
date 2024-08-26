@@ -1,4 +1,4 @@
-import { ReviewForm } from "../review/component";
+import { ReviewForm } from "../reviewForm/component";
 import { Reviews } from "../reviews/component";
 import { Menu } from "./menu/component";
 
